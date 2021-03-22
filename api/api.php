@@ -10,7 +10,6 @@ class API
     private $_method;       // GET - POST - PUT - DELETE
     private $_rawInput;     // Raw input
 
-
     function __construct($inputs)
     {
         // HTTP inputs

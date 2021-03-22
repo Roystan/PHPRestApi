@@ -112,6 +112,8 @@ class EmployeeController {
             $code = 203;
             $message  = 'Unable to delete employee.';
         }
+
+        $this->send_response($message, $employee->id, $code);
     }
 
      private function send_response( $message, $data, $code = 0 ) {

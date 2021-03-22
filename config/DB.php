@@ -18,7 +18,7 @@
 
         public function getConnection(){
             try{
-				$this->conn = new PDO('pgsql:host=' . $this->dbHost . ';dbname=' . $this->dbName, $this->user, $this->pass);
+				$this->conn = new PDO('pgsql:host=' . $this->dbHost . ';dbname=' . $this->dbName . ';sslmode=require', $this->user, $this->pass);
                 $this->conn->exec("set names utf8");
             }catch(PDOException $exception){
                 echo "Database could not be connected: " . $exception->getMessage();
