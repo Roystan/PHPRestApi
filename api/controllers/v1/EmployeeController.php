@@ -10,10 +10,9 @@ class EmployeeController {
         $stmt = $employee->findAll();
 
         $itemCount = $stmt->rowCount();
+        $employeeArr = array();
 
         if ($itemCount > 0) {
-            
-            $employeeArr = array();
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 extract($row);
